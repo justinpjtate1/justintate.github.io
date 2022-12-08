@@ -1,0 +1,105 @@
+@font-face {
+    font-family: 'HeadingFont';
+    src: url(oswald/Oswald-Light.ttf);
+}
+
+@font-face {
+    font-family: 'ParagraphFont';
+    src: url(source-sans-pro/SourceSansPro-Light.otf);
+}
+
+body {
+    min-height: 100vh;
+    margin: 0 auto;
+    background: #E9F8CE;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'ParagraphFont', Fallback, sans-serif;
+}
+
+header, footer {
+    background: whitesmoke;
+    /*position: fixed;*/
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+}
+
+main {
+    flex-grow: 1;
+    margin: 20px 12.8%;
+}
+
+.header-option {
+    margin: 20px;
+    color: green;
+}
+
+#introduction {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 200px;
+}
+
+
+[id$="heading"] {
+    font-family: 'HeadingFont', Fallback, sans-serif;
+}
+
+#main-heading {
+    grid-row: 1;
+    grid-column: 1;
+    font-size: 4em;
+}
+
+#about-me {
+    grid-row: 2/span 1;
+    grid column: 1;
+    /*add font*/
+}
+
+#profile-photo {
+    grid-row: 1/span 2;
+    grid-column: 3/span 1;
+    max-width: 200px;
+    border-radius: 100%;
+}
+
+#projects {
+    margin-top: 90px;
+}
+
+#project-heading {
+    font-size: 2.2em;
+}
+
+#rock-paper-scissors-image {
+    max-width: 350px;
+}
+
+#rock-paper-scissors-project {
+    max-width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#rock-paper-scissors-description {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+#rock-paper-scissors-heading {
+    font-size: 1.5em;
+}
+
+#contact {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#projects>div>img {
+    border-radius: 10px;
+} /*see if you can make this happen autonomously because you'll be adding more divs*/
