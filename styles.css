@@ -11,7 +11,9 @@
 body {
     min-height: 100vh;
     margin: 0 auto;
-    background: #E9F8CE;
+    /* background: #E9F8CE; */
+    /* background: whitesmoke; */
+    background: rgb(245, 250, 255);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -19,7 +21,7 @@ body {
 }
 
 header, footer {
-    background: whitesmoke;
+    /* background: whitesmoke; */
     /*position: fixed;*/
     width: 100%;
     padding: 15px;
@@ -33,7 +35,8 @@ main {
 
 .header-option {
     margin: 20px;
-    color: green;
+    /* color: green; */
+    color: rgb(27, 189, 255)
 }
 
 #introduction {
@@ -55,7 +58,7 @@ main {
 
 #about-me {
     grid-row: 2/span 1;
-    grid column: 1;
+    grid-column: 1;
     /*add font*/
 }
 
