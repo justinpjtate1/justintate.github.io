@@ -17,67 +17,97 @@
     <main>
         <section id="introduction">
             <img id="profile-photo" src="linkedin_photo_2.jpeg" alt="This was meant to be me!">
-            <h1 id="main-heading">Justin Tate</h1>        
+            <h1 id="main-heading">Justin Tate</h1>
+            <section id="contact">
+                <div id="github-details" class="contact-div">
+                    <a id="github-link" href="github.com">
+                        <img id="github-image" src="">
+                        <p id="github-link">github.com</p>
+                    </a>
+                </div>
+                <div id="email-details" class="contact-div">
+                    <a id="email-link" href="">
+                        <img id="email-image" src="">
+                        <p id="email-address">justinpjtate1@gmail.com</p>
+                    </a>
+                </div>
+                <div id="mobile-details" class="contact-div">
+                        <img id="mobile-image" src="">
+                        <p id="mobile-number">(+44)7713574902</p>
+                    
+                </div>
+                <!-- <div id="cv-details" class="contact-div">
+                    <a id="cv-link" href="">
+                        <img id="cv-image" src="">
+                        <p id="cv-link">CV</p>
+                    </a>
+                </div> -->
+            </section>        
             <p id="about-me">Learning Software development! Please see some projects below. In my previous life, I helped online web publishers to make more revenue from online advertising.
             </p>   
         </section>
-        <section id="projects">
-            <h2 id="project-heading">See some of my projects:</h2>     
-            <!-- <div id="rock-paper-scissors-project">
-                <img id="rock-paper-scissors-image" src="rock-paper-scissors.png" alt="rock, paper, scissors game">
-                <div id="rock-paper-scissors-description">
-                    <h3 id="rock-paper-scissors-heading">Rock Paper Scissors game</h3>
-                    <p id="rock-paper-scissors-text">Rock paper scissors - have a go against the computer as many times as you like</p>
+        <section id="project-carousel">
+            <h2 id="project-heading">Projects:</h2>     
+            
+            <div id="carouselMain" class="carousel slide carousel-fade">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="3" aria-label="Slide 4"></button>
                 </div>
-            </div> -->
-            <div id="carouselExample" class="carousel slide">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src="rock-paper-scissors.png" class="d-block w-100" alt="Rock Paper Scissors">
+                    <img src="Tic-Tac-Toe.png" class="d-block w-100" alt="tic-tac-toe">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Tic Tac Toe</h5>
+                        <p>HTML, JavaScript, CSS only</p>
+                        <button type="button" class="btn btn-secondary">Learn More</button>
+                    </div>
                   </div>
                   <div class="carousel-item">
-                    <img src="" class="d-block w-100" alt="linkedin_photo">
+                    <img src="Dream_Team_UI.png" class="d-block w-100" alt="dream-team">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Dream Team</h5>
+                        <p>React.js with Ruby on Rails backend. PostgreSQL database</p>
+                        <button type="button" class="btn btn-secondary">Learn More</button>
+                    </div>
                   </div>
-                  <!-- <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
-                  </div> -->
+                  <div class="carousel-item">
+                    <img src="Music_UI.png" class="d-block w-100" alt="dream-team">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Music UI</h5>
+                        <p>React Frontend using iTunes API</p>
+                        <button type="button" class="btn btn-secondary">Learn More</button>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="Game_Dictionary.png" class="d-block w-100" alt="dream-team">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Game Dictionary</h5>
+                        <p>Full MERN stack application</p>
+                        <button type="button" class="btn btn-secondary">Learn More</button>
+                    </div>
+                  </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselMain" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselMain" data-bs-slide="next">
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Next</span>
                 </button>
               </div>
         </section>
-        <section id="contact">
-            <div id="github-details" class="contact-div">
-                <a id="github-link" href="github.com">
-                    <img id="github-image" src="">
-                    <p id="github-link">github.com</p>
-                </a>
+        <section id="project-list">
+            <div id="project-1">
+                <img id="project-1-image" src="Tic-Tac-Toe.png" alt="rock, paper, scissors game">
+                <div id="project-1-description">
+                    <h3 id="project-1-heading">Rock Paper Scissors game</h3>
+                    <p id="project-1-text">Rock paper scissors - have a go against the computer as many times as you like</p>
+                </div>
             </div>
-            <div id="email-details" class="contact-div">
-                <a id="email-link" href="">
-                    <img id="email-image" src="">
-                    <p id="email-address">justinpjtate1@gmail.com</p>
-                </a>
-            </div>
-            <div id="mobile-details" class="contact-div">
-                    <img id="mobile-image" src="">
-                    <p id="mobile-number">(+44)7713574902</p>
-                
-            </div>
-            <div id="cv-details" class="contact-div">
-                <a id="cv-link" href="">
-                    <img id="cv-image" src="">
-                    <p id="cv-link">CV</p>
-                </a>
-            </div>
-            
-
         </section>
     </main>
     <footer>Justin Tate, 2022</footer>
