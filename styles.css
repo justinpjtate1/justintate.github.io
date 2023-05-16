@@ -39,7 +39,6 @@ main {
 
 .header-option {
     margin: 20px;
-    /* color: green; */
     color: rgb(27, 189, 255)
 }
 
@@ -48,6 +47,20 @@ main {
     grid-template-rows: 0.5fr 100px 0.5fr;
     grid-template-columns: 1fr 200px;
     margin: 20px 12.8%;
+}
+
+.contact-div>a {
+    text-align: center;
+}
+
+.contact-icon {
+    max-width: 64px;
+    max-height: 64px;
+    text-align: center;
+}
+
+.contact-div {
+    text-align: center;
 }
 
 #project-heading, #project-list {
@@ -72,7 +85,6 @@ main {
 #about-me {
     grid-row: 3/span 1;
     grid-column: 1;
-    /*add font*/
 }
 
 #profile-photo {
@@ -91,7 +103,6 @@ main {
 }
 
 #contact {
-    /* margin-top: 100px; */
     display: flex;
     justify-content: space-between;
 }
@@ -154,9 +165,5 @@ main {
 #project-list>div:nth-child(even)>div {
     margin-right: 20px;
     text-align: right;
-}
-
-#project-list>div:nth-child(even)>div>h3 {
-    font-size: 1.5em;
 }
 
