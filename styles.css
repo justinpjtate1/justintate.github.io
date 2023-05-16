@@ -28,7 +28,7 @@ header, footer {
     /* background: whitesmoke; */
     /*position: fixed;*/
     width: 100%;
-    padding: 15px;
+    padding: 25px;
     text-align: center;
 }
 
@@ -39,7 +39,6 @@ main {
 
 .header-option {
     margin: 20px;
-    color: rgb(27, 189, 255)
 }
 
 #introduction {
@@ -49,14 +48,19 @@ main {
     margin: 20px 12.8%;
 }
 
+/* all elements with the blue font color */
+
+#first-name, .contact-div>a, .contact-div, .btn.btn-secondary {
+    color: rgb(37, 149, 194)
+}
+
 .contact-div>a {
-    text-align: center;
+    text-decoration: none;
 }
 
 .contact-icon {
-    max-width: 64px;
-    max-height: 64px;
-    text-align: center;
+    max-width: 65px;
+    max-height: 65px;
 }
 
 .contact-div {
@@ -125,7 +129,6 @@ main {
 
 .btn.btn-secondary {
     background: rgb(248, 252, 255);
-    color: rgb(27, 189, 255)
 }
 
 #project-list>div {
