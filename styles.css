@@ -24,12 +24,21 @@ html {
     scroll-behavior: smooth;
 }
 
-header, footer {
+header {
     /* background: whitesmoke; */
     /*position: fixed;*/
     width: 100%;
-    padding: 25px;
+    padding: 10px;
+    text-align: left;
+}
+
+header>a:hover {
+    border-bottom: 5px solid rgb(25, 142, 189);
+}
+
+footer {
     text-align: center;
+    padding: 15px;
 }
 
 main {
@@ -49,9 +58,8 @@ main {
 }
 
 /* all elements with the blue font color */
-
 #first-name, .contact-div>a, .contact-div, .btn.btn-secondary {
-    color: rgb(37, 149, 194)
+    color: rgb(25, 142, 189)
 }
 
 .contact-div>a {
@@ -135,6 +143,7 @@ main {
     margin-top: 30px;
     padding-bottom: 30px;
     border-bottom: solid;
+    border-color: rgb(25, 142, 189);
 }
 
 #project-list>div:nth-child(odd) {
