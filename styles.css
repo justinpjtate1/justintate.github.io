@@ -20,6 +20,10 @@ body {
     font-family: 'ParagraphFont', Fallback, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 header, footer {
     /* background: whitesmoke; */
     /*position: fixed;*/
@@ -41,7 +45,7 @@ main {
 
 #introduction {
     display: grid;
-    grid-template-rows: 1fr 100px 1fr;
+    grid-template-rows: 0.5fr 100px 0.5fr;
     grid-template-columns: 1fr 200px;
     margin: 20px 12.8%;
 }
@@ -113,22 +117,46 @@ main {
     color: rgb(27, 189, 255)
 }
 
-#project-1-image {
-    max-width: 350px;
+#project-list>div {
+    margin-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: solid;
 }
 
-#project-1 {
-    /* max-width: 60%; */
+#project-list>div:nth-child(odd) {
     display: flex;
     justify-content: left;
+    flex-direction: row;
 }
 
-#project-1-description {
+#project-list>div:nth-child(even) {
+    display: flex;
+    justify-content: right;
+    flex-direction: row-reverse;
+}
+
+#project-list > div > img {
+    max-width: 350px;
+    max-height: 350px;
+}
+
+#project-list>div>div {
     display: flex;
     flex-direction: column;
     margin-left: 20px;
+    margin-right: 20px;
 }
 
-#project-1-heading {
+#project-list>div:nth-child(odd)>div {
+    margin-left: 20px
+}
+
+#project-list>div:nth-child(even)>div {
+    margin-right: 20px;
+    text-align: right;
+}
+
+#project-list>div:nth-child(even)>div>h3 {
     font-size: 1.5em;
 }
+
