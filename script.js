@@ -68,3 +68,5 @@ learnMoreButtons.forEach((button, index) => {
     setTimeout(() => projectToHighlight.className = '', 3000)
   })
 })
+
+// history.replaceState(null, null, '');
