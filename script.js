@@ -31,3 +31,28 @@ projectListElements(1, 'Tic Tac Toe', 'resources/Tic-Tac-Toe-list.png', 'Grid-ba
 projectListElements(2, 'Dream Team', 'resources/dream-team-project-list.png', 'React front end with Ruby Backend. Created an app that allows users to create, update and delete their own fantasy football teams and share them with other users. This project really helped my knowledge and application of Ruby.')
 projectListElements(3, 'Create Your Own Playlist', 'resources/music-ui-list.png', 'React frontend app with an Axios API connection to the iTunes API. The aim of the project was to allow users to create and customise their own music playlists as they please. This project really cemented my React knowledge and enabled me to learn more about React Hooks in particular.')
 projectListElements(4, 'Game Dictionary', 'resources/game-dictionary-list.png', 'Full-stack MERN app with CRUD functionality. As a group, we created an app that allows fans of the game Apex Legends to understand the game better. I worked on the Authentication, Login page and Profile page as well as pair programming the Node.js server.')
+
+const header = document.querySelector('#header-sections')
+
+const loadStickyHeader = () => {
+  if(window.pageYOffset > 205) {
+    header.className = 'show'
+  } else {
+    header.className = 'hide'
+  }
+}
+
+const aboutMenuSelect = document.querySelector('#about-select')
+
+const highlightAbout = () => {
+  if(window.pageYOffset > 205 && window.pageYOffset < 617) {
+    aboutMenuSelect.className = 'highlighted'
+  } else {
+    aboutMenuSelect.className = 'not-highlighted'
+  }
+}
+
+window.onscroll = () => {
+  loadStickyHeader();
+  highlightAbout();
+}
