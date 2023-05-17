@@ -73,6 +73,24 @@ header {
     color: black;
 }
 
+.highlighted-project {
+    animation: fadeBackground 3s;
+}
+
+@keyframes fadeBackground {
+    0% {
+        background-color: rgb(248, 252, 255);
+    }
+
+    50% {
+        background-color: rgb(164, 205, 235);
+    }
+
+    100% {
+        background-color: rgb(248, 252, 255);
+    }
+}
+
 #section-navigation>div>a:hover, #header-sections>a:hover {
     cursor: pointer;
 }
@@ -120,7 +138,7 @@ main {
     text-align: center;
 }
 
-#introduction, #project-heading, #project-list, footer {
+#introduction, #project-heading, #project-list, footer, #skills {
     margin: 20px 12.8%;
 }
 

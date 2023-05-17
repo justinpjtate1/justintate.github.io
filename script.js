@@ -56,3 +56,15 @@ window.onscroll = () => {
   loadStickyHeader();
   highlightAbout();
 }
+
+const learnMoreButtons = document.querySelectorAll('.btn.btn-secondary')
+
+learnMoreButtons.forEach((button, index) => {
+  button.addEventListener('click', () => {
+    const projectNumber = index + 1
+    const stringValue = projectNumber.toString()
+    const projectToHighlight = document.querySelector(`#project-${stringValue}`)
+    projectToHighlight.className = 'highlighted-project';
+    setTimeout(() => projectToHighlight.className = '', 3000)
+  })
+})
