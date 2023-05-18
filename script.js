@@ -35,26 +35,53 @@ projectListElements(4, 'Game Dictionary', 'resources/game-dictionary-list.png', 
 const header = document.querySelector('#header-sections')
 
 const loadStickyHeader = () => {
-  if(window.pageYOffset > 205) {
+  if(window.pageYOffset > document.querySelector('#about-me').offsetTop) {
     header.className = 'show'
   } else {
     header.className = 'hide'
   }
 }
 
-const aboutMenuSelect = document.querySelector('#about-select')
-
-const highlightAbout = () => {
-  if(window.pageYOffset > 205 && window.pageYOffset < 617) {
-    aboutMenuSelect.className = 'highlighted'
+const highlightSection = (menuSelector, sectionSelector) => {
+  if(window.pageYOffset >= sectionSelector.offsetTop -1 && window.pageYOffset < (sectionSelector.offsetTop + sectionSelector.scrollHeight -1)) {
+    menuSelector.className = 'highlighted'
   } else {
-    aboutMenuSelect.className = 'not-highlighted'
+    menuSelector.className = 'not-highlighted'
   }
 }
 
+const highlightSectionBeforeFooter = (menuSelector, sectionSelector, bodySelector) => {
+  if(window.pageYOffset >= sectionSelector.offsetTop && window.pageYOffset < (bodySelector.scrollHeight - window.visualViewport.height - document.querySelector('footer').scrollHeight)) {
+    menuSelector.className = 'highlighted'
+  } else {
+    menuSelector.className = 'not-highlighted'
+  }
+}
+
+const highlightFooter = (menuSelector, sectionSelector) => {
+  if(window.pageYOffset > (sectionSelector.scrollHeight - window.visualViewport.height - document.querySelector('footer').scrollHeight)) {
+    menuSelector.className = 'highlighted'
+  } else {
+    menuSelector.className = 'not-highlighted'
+  }
+}
+
+const aboutMenuSelect = document.querySelector('#about-select')
+const aboutSection = document.querySelector('#about-me')
+const skillsMenuSelect = document.querySelector('#skills-select')
+const skillsSection = document.querySelector('#skills')
+const projectsMenuSelect = document.querySelector('#projects-select')
+const projectsSection = document.querySelector('#project-carousel')
+const projectsSectionExtended = document.querySelector('#project-list')
+const contactMenuSelect = document.querySelector('#contact-select')
+const contactSection = document.querySelector('body')
+
 window.onscroll = () => {
   loadStickyHeader();
-  highlightAbout();
+  highlightSection(aboutMenuSelect, aboutSection);
+  highlightSection(skillsMenuSelect, skillsSection);
+  highlightSectionBeforeFooter(projectsMenuSelect, projectsSection, contactSection);
+  highlightFooter(contactMenuSelect, contactSection);
 }
 
 const learnMoreButtons = document.querySelectorAll('.btn.btn-secondary')
@@ -71,30 +98,43 @@ learnMoreButtons.forEach((button, index) => {
 
 // history.replaceState(null, null, '');
 
-const codingSkillsElements = (skillNumber, skill, src) => {
-  const codingSkillsSection = document.querySelector('#coding-skills-section')
+const skillsElements = (skillNumber, skill, type, src) => {
+  let skillsSection = null
+  if(type === 'coding') {
+    skillsSection = document.querySelector('#coding-skills-section')
+  } else {
+    skillsSection = document.querySelector('#professional-skills-section')
+  }
   const skillDiv = document.createElement('div')
-  skillDiv.id = `coding-skill-${skillNumber}`
-  skillDiv.className = 'coding-skill'
-  const skillImage = document.createElement('img')
-  skillImage.id = `coding-skill-${skillNumber}-image`
-  skillImage.className = 'coding-skill-image'
-  skillImage.src = src
+  skillDiv.id = `skill-${skillNumber}`
+  skillDiv.className = 'skill'
+  skillsSection.appendChild(skillDiv)
+  if(type === 'coding') {
+    const skillImage = document.createElement('img')
+    skillImage.id = `skill-${skillNumber}-image`
+    skillImage.className = 'skill-image'
+    skillImage.src = src
+    skillDiv.appendChild(skillImage)
+  }
   const skillName = document.createElement('p')
-  skillName.id = `coding-skill-${skillNumber}-name`
-  skillName.className = `coding-skill-name`
+  skillName.id = `skill-${skillNumber}-name`
+  skillName.className = `skill-name`
   skillName.innerText = skill
-  codingSkillsSection.appendChild(skillDiv)
-  skillDiv.appendChild(skillImage)
   skillDiv.appendChild(skillName)
 }
 
-codingSkillsElements(1, 'JavaScript', 'resources/js.png')
-codingSkillsElements(2, 'HTML5', 'resources/html.png')
-codingSkillsElements(3, 'CSS3', 'resources/css.png')
-codingSkillsElements(4, 'React.js', 'resources/react.png')
-codingSkillsElements(5, 'Node.js', 'resources/nodejs.png')
-codingSkillsElements(6, 'MongoDB', 'resources/mongodb.png')
-codingSkillsElements(7, 'Ruby on Rails', 'resources/ruby.png')
-codingSkillsElements(8, 'Git', 'resources/git.png')
-codingSkillsElements(9, 'PostgreSQL', 'resources/postgresql.png')
+skillsElements(1, 'JavaScript', 'coding', 'resources/js.png')
+skillsElements(2, 'HTML5', 'coding', 'resources/html.png')
+skillsElements(3, 'CSS3', 'coding', 'resources/css.png')
+skillsElements(4, 'React.js', 'coding', 'resources/react.png')
+skillsElements(5, 'Node.js', 'coding', 'resources/nodejs.png')
+skillsElements(6, 'MongoDB', 'coding', 'resources/mongodb.png')
+skillsElements(7, 'Ruby on Rails', 'coding', 'resources/ruby.png')
+skillsElements(8, 'Git', 'coding', 'resources/git.png')
+skillsElements(9, 'PostgreSQL', 'coding', 'resources/postgresql.png')
+// skillsElements(10, 'Team Leadership', 'pro')
+// skillsElements(11, 'Ad Technologies', 'pro')
+// skillsElements(12, 'Client Serives', 'pro')
+// skillsElements(13, 'Product Management', 'pro')
+// skillsElements(14, 'Troubleshooting', 'pro')
+// skillsElements(15, 'Presenting', 'pro')

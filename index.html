@@ -13,12 +13,11 @@
 <body>
     <header>
         <div id="header-sections" class="hide">
-            <a id="about-select">About</a>
-            <a id="skills-select">Skills</a>
-            <a id="experience-select">Experience</a>
-            <a id="projects-select">Projects</a>
-            <a id="life-select">Life</a>
-            <a id="contact-select">Contact</a>
+            <a id="about-select" href="#about-me">About</a>
+            <a id="skills-select" href="#skills">Skills</a>
+            <!-- <a id="experience-select">Experience</a> -->
+            <a id="projects-select" href="#project-carousel">Projects</a>
+            <a id="contact-select" href="#contact">Contact</a>
         </div>
     </header>
     <main>
@@ -26,33 +25,35 @@
             <img id="profile-photo" src="resources/linkedin_photo_2.jpeg" alt="This was meant to be me!">
             <div>
                 <h1 id="main-heading">Hi, I'm <span id="first-name">Justin!</span></h1>
-                <h3>Ad Tech Professional & Web Developer</h3>
+                <h3>Ad Tech Professional & Full-Stack Web Developer</h3>
             </div>
             <section id="section-navigation">
                 <div id="sections">
-                    <a>About</a>
-                    <a>Skills</a>
-                    <a>Experience</a>
-                    <a>Projects</a>
-                    <a>Life</a>
-                    <a>Contact</a>
+                    <a href="#about-me">About</a>
+                    <a href="#skills">Skills</a>
+                    <!-- <a>Experience</a> -->
+                    <a href="#project-carousel">Projects</a>
+                    <a href="#contact">Contact</a>
                 </div>
             </section>
             <div id="about-me">
                 <h2>About</h2>
                 <p id="about-me-1">My professional experience so far has been in Advertising Technology, where I’ve helped online web publishers grow and understand their advertising revenue. I’ve helped publishers with this problem in different capacities from developing products that create value to them to providing support with technical integrations and performance improvement. My willingness to learn and adapt quickly has been key to taking on the different roles required of me.</p>
                 <p id="about-me-2">During this time, I found that I worked best when working on technical problems. This led me to the Software Engineering Immersive course at General Assembly. I’ve been developing my understanding of full-stack development, mostly using JavaScript, React and the MERN stack so I can understand better how to solve technical problems for end customers.</p>
-                <p id="about-me-3">In my next role, I want to continue to create value for the end customer while using & developing my technical skills further. I also work best in teams. I want to work in an environment where I can learn from those around me while helping them in the meantime.</p>
+                <!-- <p id="about-me-3">In my next role, I want to continue to create value for the end customer while using & developing my technical skills further. I also work best in teams. I want to work in an environment where I can learn from those around me while helping them in the meantime.</p> -->
             </div>  
         </section>
         <section id="skills">
             <h2 id="skills-heading">Skills</h2>
             <h3 id="coding-skills">Coding Skills</h3>
             <div id='coding-skills-section'></div>
-            <br><br><br>
-            <h3 id="professional-skills">Professional Skills</h3>
-            <div id="professional-skills-section"></div>
+            <!-- <br><br> -->
+            <!-- <h3 id="professional-skills">Professional Skills</h3>
+            <div id="professional-skills-section"></div> -->
         </section>
+        <!-- <section id="experience">
+            <h2 id="experience-heading">Experience</h2>
+        </section> -->
         <section id="project-carousel">
             <h2 id="project-heading">Projects</h2>     
             
@@ -77,15 +78,15 @@
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Dream Team</h5>
                         <p>React.js with Ruby on Rails backend. PostgreSQL database</p>
-                        <button type="button" class="btn btn-secondary" href="#project-2">Learn More</button>
+                        <a href="#project-2"><button type="button" class="btn btn-secondary" href="#project-2">Learn More</button></a>
                     </div>
                   </div>
                   <div class="carousel-item">
                     <img src="resources/music-ui-carousel.png" class="d-block w-100" alt="Create your own playlist">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Music UI</h5>
-                        <p>React Frontend using iTunes API</p>
-                        <button type="button" class="btn btn-secondary" href="#project-3">Learn More</button>
+                        <h5>Create your own playlist</h5>
+                        <p>React.js Frontend using iTunes API</p>
+                        <a href="#project-3"><button type="button" class="btn btn-secondary" href="#project-3">Learn More</button></a>
                     </div>
                   </div>
                   <div class="carousel-item">
@@ -93,7 +94,7 @@
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Game Dictionary</h5>
                         <p>Full MERN stack application</p>
-                        <button type="button" class="btn btn-secondary" href="#project-4">Learn More</button>
+                        <a href="#project-4"><button type="button" class="btn btn-secondary" href="#project-4">Learn More</button></a>
                     </div>
                   </div>
                 </div>
@@ -106,8 +107,7 @@
                   <span class="visually-hidden">Next</span>
                 </button>
               </div>
-        </section>
-        <section id="project-list">
+            <section id="project-list"></section>
         </section>
     </main>
     <footer>
