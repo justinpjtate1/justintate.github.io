@@ -194,6 +194,17 @@ h2 {
     justify-content: space-between;
 }
 
+.coding-skill {
+    display: inline-block;
+    text-align: center;
+    margin-right: 18px;
+}
+
+.coding-skill-image {
+    max-height: 80px;
+    max-width: 80px;
+}
+
 #carouselMain {
     width: 100%;
     height: 500px;

@@ -70,3 +70,31 @@ learnMoreButtons.forEach((button, index) => {
 })
 
 // history.replaceState(null, null, '');
+
+const codingSkillsElements = (skillNumber, skill, src) => {
+  const codingSkillsSection = document.querySelector('#coding-skills-section')
+  const skillDiv = document.createElement('div')
+  skillDiv.id = `coding-skill-${skillNumber}`
+  skillDiv.className = 'coding-skill'
+  const skillImage = document.createElement('img')
+  skillImage.id = `coding-skill-${skillNumber}-image`
+  skillImage.className = 'coding-skill-image'
+  skillImage.src = src
+  const skillName = document.createElement('p')
+  skillName.id = `coding-skill-${skillNumber}-name`
+  skillName.className = `coding-skill-name`
+  skillName.innerText = skill
+  codingSkillsSection.appendChild(skillDiv)
+  skillDiv.appendChild(skillImage)
+  skillDiv.appendChild(skillName)
+}
+
+codingSkillsElements(1, 'JavaScript', 'resources/js.png')
+codingSkillsElements(2, 'HTML5', 'resources/html.png')
+codingSkillsElements(3, 'CSS3', 'resources/css.png')
+codingSkillsElements(4, 'React.js', 'resources/react.png')
+codingSkillsElements(5, 'Node.js', 'resources/nodejs.png')
+codingSkillsElements(6, 'MongoDB', 'resources/mongodb.png')
+codingSkillsElements(7, 'Ruby on Rails', 'resources/ruby.png')
+codingSkillsElements(8, 'Git', 'resources/git.png')
+codingSkillsElements(9, 'PostgreSQL', 'resources/postgresql.png')
