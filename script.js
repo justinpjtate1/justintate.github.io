@@ -27,7 +27,7 @@ const projectListElements = (projectNumber, heading, src, innerText) => {
   projectDescription.appendChild(projectText)
 }
 
-projectListElements(1, 'Tic Tac Toe', 'resources/Tic-Tac-Toe-list.png', 'Grid-based game using just JavaScript, HTML and CSS. This project helped to cement my understanding of JavaScript in particular and gave me a good opportunity to build an app that involved a significant amount of game logic. It also allowed me to learn more about coding best practices for bigger-sized applications and had a lot of scope to add optional features (local storage and photo uploads for example)')
+projectListElements(1, 'Tic Tac Toe', 'resources/Tic-Tac-Toe-list.png', 'Grid-based game using just JavaScript, HTML and CSS. This project helped to cement my understanding of JavaScript in particular and gave me a good opportunity to build an app that involved a significant amount of game logic. It also allowed me to learn more about coding best practices for bigger-sized applications and had a lot of scope to add optional features\nDeployement Link: https://justinpjtate1.github.io/Tic-Tac-Toe/\nGithub ReadMe: https://github.com/justinpjtate1/Tic-Tac-Toe#readme')
 projectListElements(2, 'Dream Team', 'resources/dream-team-project-list.png', 'React front end with Ruby Backend. Created an app that allows users to create, update and delete their own fantasy football teams and share them with other users. This project really helped my knowledge and application of Ruby.')
 projectListElements(3, 'Create Your Own Playlist', 'resources/music-ui-list.png', 'React frontend app with an Axios API connection to the iTunes API. The aim of the project was to allow users to create and customise their own music playlists as they please. This project really cemented my React knowledge and enabled me to learn more about React Hooks in particular.')
 projectListElements(4, 'Game Dictionary', 'resources/game-dictionary-list.png', 'Full-stack MERN app with CRUD functionality. As a group, we created an app that allows fans of the game Apex Legends to understand the game better. I worked on the Authentication, Login page and Profile page as well as pair programming the Node.js server.')
@@ -35,7 +35,7 @@ projectListElements(4, 'Game Dictionary', 'resources/game-dictionary-list.png', 
 const header = document.querySelector('#header-sections')
 
 const loadStickyHeader = () => {
-  if(window.pageYOffset > document.querySelector('#about-me').offsetTop) {
+  if(window.pageYOffset > document.querySelector('#sections').offsetTop + document.querySelector('#sections').scrollHeight -20) {
     header.className = 'show'
   } else {
     header.className = 'hide'
@@ -91,8 +91,18 @@ learnMoreButtons.forEach((button, index) => {
     const projectNumber = index + 1
     const stringValue = projectNumber.toString()
     const projectToHighlight = document.querySelector(`#project-${stringValue}`)
-    projectToHighlight.className = 'highlighted-project';
+    projectToHighlight.className = 'highlighted-project'
     setTimeout(() => projectToHighlight.className = '', 3000)
+  })
+})
+
+const contactButtons = [document.querySelector('#contact-select'), document.querySelector('#sections>a:last-of-type')]
+
+contactButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const contactSection = document.querySelector('footer');
+    contactSection.className = 'highlighted-project'
+    setTimeout(() => contactSection.className = '', 3000)
   })
 })
 
